@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Área de Match</title>
+        <link rel="stylesheet" type="text/css" href="match.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    </head>
+    <body>
+         <div class="card">
+            <div class="imgbx">
+                <img src="img/carminha.png">
+            </div>
+            <div class="content">
+                <div class="details">
+                    <h2>Carminha<br><span>AAAAAAAAA</span></h2>
+                    <div class="data">
+                        <h3>Descrição<br><span>aaaaaaaaaa</span></h3>
+                    </div>
+                    <div class="actionBtn">
+                        <button>Ver Perfil</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgbx">
+                <img src="img/carminha.png">
+            </div>
+            <div class="content">
+                <div class="details">
+                    <h2>Carminha<br><span>AAAAAAAAA</span></h2>
+                    <div class="data">
+                        <h3>Descrição<br><span>aaaaaaaaaa</span></h3>
+                    </div>
+                    <div class="actionBtn">
+                        <button>Ver Perfil</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgbx">
+                <img src="img/carminha.png">
+            </div>
+            <div class="content">
+                <div class="details">
+                    <h2>Carminha<br><span>AAAAAAAAA</span></h2>
+                    <div class="data">
+                        <h3>Descrição<br><span>aaaaaaaaaa</span></h3>
+                    </div>
+                    <div class="actionBtn">
+                        <button>Ver Perfil</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+        <!--Initializing swiper slider-->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidePerView: 3,
+                spaceBetween: 30,
+                grabCursor: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                    pauseeOnMouseEnter: true,
+                }, 
+                slidesPerGroup: 1,
+                loop: true,
+                loopFillGroupWithBlank: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextE1: ".swiper-button-next",
+                    prevE1: ".swiper-button-prev",
+                },
+                
+            })
+        </script>
+    </body>
+</html>

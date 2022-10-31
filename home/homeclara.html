@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Cmpatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Menu | Front</title>
+        <link rel="stylesheet" href="homeclara.css">
+    </head>
+    <body>
+        <div class="navigation">
+            <ul>
+                <li class="list active">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="title">Home</span>
+                        
+                    </a>      
+                </li><br>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+                        <span class="title">Perfil</span>
+                    </a>
+                </li><br>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="chatbox-ellipses-outline"></ion-icon></span>
+                        <span class="title">Mensagem</span>
+                    </a>
+                </li><br>
+                <li class="list">
+                    <a href="https://discord.gg/pVBsvnBu">
+                        <span class="icon"><ion-icon name="logo-discord"></ion-icon></ion-icon></span>
+                        <span class="title">Comunidade</span>
+                    </a>
+                </li><br>
+                <li class="list">
+                    <a href="contato/contato.html">
+                        <span class="icon"><ion-icon name="hand-left-outline"></ion-icon></ion-icon></span>
+                        <span class="title">Suporte</span>
+                    </a>
+                </li><br>
+                    <li class="list">
+                        <a href="#">
+                            <span class="icon"><ion-icon name="options-outline"></ion-icon>
+                            </span>
+                            <span class="title">Configurações</span>
+                        </a>
+                    </li><br>
+                    <li class="list">
+                        <a href="#">
+                            <span class="icon"><ion-icon name="enter-outline"></ion-icon></span>
+                            <span class="title">Sair</span>
+                        </a>
+                    </li><br>
+                    <li class="list">
+                        <a href="home/home.html">
+                            <span class="icon"><ion-icon name="moon-outline"></ion-icon></ion-icon></span>
+                            <span class="title">Tema</span>
+                        </a>
+                    </li>
+                
+            </ul>
+                    
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach((item) =>
+        item.addEventListener('click', activeLink));
+    </script>
+</body>
+  </html>
