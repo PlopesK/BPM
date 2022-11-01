@@ -49,14 +49,14 @@
                         </a>
                     </li><br>
                     <li class="list">
-                        <a href="home/homeclara.html">
+                        <a href="#" id="#tema">
                             <span class="icon"><ion-icon name="moon-outline"></ion-icon></ion-icon></span>
                             <span class="title">Tema</span>
                         </a>
                         <div class="temas">
-                            <button> Padrão </button>
-                            <button> Escura </butto>
-                            <button> Clara </button>
+                            <button id="padrao"> Padrão </button>
+                            <button id="escura"> Escura </butto>
+                            <button id="clara"> Clara </button>
                         </div>
                     </li>
                     <li class="list">
@@ -78,6 +78,31 @@
         }
         list.forEach((item) =>
         item.addEventListener('click', activeLink));
+    </script>
+    <script>
+        const tema = document.querySelector('#padrao');
+        const padrao = document.querySelector('#padrao');
+        const escura = document.querySelector('#escura');
+        const clara = document.querySelector('#clara');
+
+        padrao.addEventListener('click', () => {
+            document.documentElement.style.setProperty('--first-color', '#012a4a');
+            document.documentElement.style.setProperty('--second-color', '#013a63');
+            document.documentElement.style.setProperty('--third-color', '#014f8c');
+            document.documentElement.style.setProperty('--forth-color', '#20a6ff');
+        });
+        escura.addEventListener('click', () => {
+            document.documentElement.style.setProperty('--first-color', '#2D2D2D');
+            document.documentElement.style.setProperty('--second-color', '#424242');
+            document.documentElement.style.setProperty('--third-color', '#099c22');
+            document.documentElement.style.setProperty('--forth-color', '#099c22');
+        });
+        clara.addEventListener('click', () => {
+            document.documentElement.style.setProperty('--first-color', '#012a4a');
+            document.documentElement.style.setProperty('--second-color', '#013a63');
+            document.documentElement.style.setProperty('--third-color', '#014f8c');
+            document.documentElement.style.setProperty('--forth-color', '#20a6ff');
+        });
     </script>
 </body>
   </html>

@@ -1,3 +1,9 @@
+:root {
+    --first-color: #012a4a;
+    --second-color: #013a63;
+    --third-color: #014f8c;
+    --forth-color: #20a6ff;
+}
 *{
     margin: 0;
     padding: 0;
@@ -9,7 +15,7 @@ body{
     justify-content: left;
     align-items: left;
     min-height: 100vh;
-    background:  #012a4a;
+    background:  var(--first-color);
 }
 .line{
     background-color: #fff;
@@ -21,13 +27,20 @@ body{
     right: 200px;
 }
 
+.temas {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
 .navigation{
     position: relative;
     height: 750px;
-    background: #013a63;
+    background: var(--second-color);
     width: 100px;
-    box-shadow: 10px 0 0 #014f8c;
-    border-left: 10x solid  #013a63;
+    box-shadow: 10px 0 0 var(--third-color);
+    border-left: 10x solid  var(--second-color);
     overflow-x: hidden;
     transition: 0.5s;
 
@@ -79,7 +92,7 @@ body{
     white-space: nowrap;
 }
 .navigation ul li.active{
-    background: #014f8c;
+    background: var(--third-color);
 }
 .navigation ul li.active a::before{
     content: '';
@@ -88,9 +101,9 @@ body{
     right: 0;
     width: 30px;
     height: 30px;
-    background: #013a63;
+    background: var(--second-color);
     border-radius: 50%;
-    box-shadow: 15px 15px 0 #014f8c;
+    box-shadow: 15px 15px 0 var(--third-color);
 }
 .navigation ul li.active a::after{
     content: '';
@@ -99,9 +112,9 @@ body{
     right: 0;
     width: 30px;
     height: 30px;
-    background: #013a63;
+    background: var(--second-color);
     border-radius: 50%;
-    box-shadow: 15px -15px 0 #014f8c;
+    box-shadow: 15px -15px 0 var(--third-color);
 }
 .slider{
     margin: 0 auto;
@@ -158,7 +171,7 @@ body{
     margin-left: -75%;
 }
 .navigation-auto div{
-    border: 2px solid #20a6ff;
+    border: 2px solid var(--forth-color);
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -191,7 +204,7 @@ footer{
     bottom: 0;
     left: 110px;
     right: 0;
-    background: #013a63;
+    background: var(--second-color);
     height: 0;
     width: 100vw;
     font-family: "Open Sans";
@@ -237,11 +250,11 @@ footer{
     transition: color .4s ease;
 }
 .socials a:hover i{
-    color: #20a6ff;
+    color: var(--forth-color);
 }
 .footer-bottom{
     background: #000;
-    width: 100vhw;
+    width: 100vw;
     padding: 20px 0;
     text-align: center;
 }
