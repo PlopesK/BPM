@@ -49,14 +49,15 @@
                         </a>
                     </li><br>
                     <li class="list">
-                        <a href="#" id="#tema">
+                        <a href="#" onclick="cor()" id="#tema">
                             <span class="icon"><ion-icon name="moon-outline"></ion-icon></ion-icon></span>
-                            <span class="title">Tema</span>
+                            <span class="title">Temas</span>
                         </a>
-                        <div class="temas">
+                        <div class="temas" style="display: none;" id="opcoes">
                             <button id="padrao"> Padrão </button>
                             <button id="escura"> Escura </butto>
-                            <button id="clara"> Clara </button>
+                            <button id="clara"> Claro </button>
+                            <button id="verde"> Verde </button>
                         </div>
                     </li>
                     <li class="list">
@@ -79,8 +80,19 @@
         list.forEach((item) =>
         item.addEventListener('click', activeLink));
     </script>
+
     <script>
-        const tema = document.querySelector('#padrao');
+        function cor() {
+            const opcoes = document.getElementById("opcoes");
+            if (opcoes.style.display === "none") {
+                opcoes.style.display = "block";
+            } 
+            else {
+                opcoes.style.display = "none";
+            }
+        };
+    </script>
+    <script>
         const padrao = document.querySelector('#padrao');
         const escura = document.querySelector('#escura');
         const clara = document.querySelector('#clara');
@@ -90,19 +102,29 @@
             document.documentElement.style.setProperty('--second-color', '#013a63');
             document.documentElement.style.setProperty('--third-color', '#014f8c');
             document.documentElement.style.setProperty('--forth-color', '#20a6ff');
+            document.documentElement.style.setProperty('--fifth-color', '#fff');
         });
         escura.addEventListener('click', () => {
             document.documentElement.style.setProperty('--first-color', '#2D2D2D');
             document.documentElement.style.setProperty('--second-color', '#424242');
             document.documentElement.style.setProperty('--third-color', '#099c22');
             document.documentElement.style.setProperty('--forth-color', '#099c22');
+            document.documentElement.style.setProperty('--fifth-color', '#fff');
         });
         clara.addEventListener('click', () => {
             document.documentElement.style.setProperty('--first-color', '#012a4a');
             document.documentElement.style.setProperty('--second-color', '#013a63');
             document.documentElement.style.setProperty('--third-color', '#014f8c');
             document.documentElement.style.setProperty('--forth-color', '#20a6ff');
+            document.documentElement.style.setProperty('--fifth-color', 'rgb(0, 0, 0)');
+        });
+        verde.addEventListener('click', () => {
+            document.documentElement.style.setProperty('--first-color', '#012a4a');
+            document.documentElement.style.setProperty('--second-color', '#013a63');
+            document.documentElement.style.setProperty('--third-color', '#014f8c');
+            document.documentElement.style.setProperty('--forth-color', '#20a6ff');
+            document.documentElement.style.setProperty('--fifth-color', 'rgb(0, 0, 0)');
         });
     </script>
 </body>
-  </html>
+</html>
