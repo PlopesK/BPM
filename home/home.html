@@ -79,12 +79,10 @@
         }
         list.forEach((item) =>
         item.addEventListener('click', activeLink));
-    </script>
 
-    <script>
         function cor() {
             const opcoes = document.getElementById("opcoes");
-            if (opcoes.style.display === "none") {
+            if (opcoes.style.display == "none") {
                 opcoes.style.display = "block";
             } 
             else {
