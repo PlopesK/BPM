@@ -1,3 +1,10 @@
+:root {
+    --first-color: #012a4a;
+    --second-color: #013a63;
+    --third-color: #014f8c;
+    --forth-color: #20a6ff;
+    --fifth-color: #fff;
+}
 *{
     margin: 0;
     padding: 0;
@@ -9,10 +16,10 @@ body{
     justify-content: left;
     align-items: left;
     min-height: 100vh;
-    background:  #012a4a;
+    background:  var(--first-color);
 }
 .line{
-    background-color: #fff;
+    background-color: var(--fifth-color);
     width: 3px;
     position: absolute;
     height: 500px;
@@ -21,14 +28,34 @@ body{
     right: 200px;
 }
 
+.temas {
+    position: relative;
+    flex-direction: row;
+    padding: 5px 3px 1px 3px;
+}
+
+.temas button {
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-decoration: double;
+    background-color: var(--third-color);
+    color: var(--fifth-color);
+    border-color: var(--first-color);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
 .navigation{
     position: relative;
     height: 750px;
-    background: #013a63;
+    background: var(--second-color);
     width: 100px;
-    box-shadow: 10px 0 0 #014f8c;
-    border-left: 10x solid  #013a63;
-    overflow-x: hidden;
+    box-shadow: 10px 0 0 var(--third-color);
+    border-left: 10x solid  var(--second-color);
+    overflow: hidden;
     transition: 0.5s;
 
 }
@@ -55,7 +82,7 @@ body{
     display: flex;
     width: 100%;
     text-decoration: none;
-    color: #fff;
+    color: var(--fifth-color);
 }
 .navigation ul li a .icon{
     position: relative;
@@ -79,7 +106,7 @@ body{
     white-space: nowrap;
 }
 .navigation ul li.active{
-    background: #014f8c;
+    background: var(--third-color);
 }
 .navigation ul li.active a::before{
     content: '';
@@ -88,9 +115,8 @@ body{
     right: 0;
     width: 30px;
     height: 30px;
-    background: #013a63;
     border-radius: 50%;
-    box-shadow: 15px 15px 0 #014f8c;
+    box-shadow: 15px 15px 0 var(--third-color);
 }
 .navigation ul li.active a::after{
     content: '';
@@ -99,9 +125,8 @@ body{
     right: 0;
     width: 30px;
     height: 30px;
-    background: #013a63;
     border-radius: 50%;
-    box-shadow: 15px -15px 0 #014f8c;
+    box-shadow: 15px -15px 0 var(--third-color);
 }
 .slider{
     margin: 0 auto;
@@ -133,7 +158,7 @@ body{
     justify-content: center;
 }
 .manual-btn{
-    border: 2px solid #fff;
+    border: 2px solid var(--fifth-color);
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -143,7 +168,7 @@ body{
     margin-right: 40px ;
 }
 .manual-btn:hover{
-  background-color: #fff;
+  background-color: var(--fifth-color);
 }
 #radio1:checked ~ .first{
     margin-left: 0;
@@ -158,7 +183,7 @@ body{
     margin-left: -75%;
 }
 .navigation-auto div{
-    border: 2px solid #20a6ff;
+    border: 2px solid var(--forth-color);
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -175,28 +200,28 @@ body{
     margin-right: 40px;
 }
 #radio1:checked ~ .navigation-auto .auto-btn1{
-    background-color: #fff;
+    background-color: var(--fifth-color);
 }
 #radio2:checked ~ .navigation-auto .auto-btn2{
-    background-color: #fff;
+    background-color: var(--fifth-color);
 }
 #radio3:checked ~ .navigation-auto .auto-btn3{
-    background-color: #fff;
+    background-color: var(--fifth-color);
 }
 #radio4:checked ~ .navigation-auto .auto-btn4{
-    background-color: #fff;
+    background-color: var(--fifth-color);
 }
 footer{
     position: absolute;
     bottom: 0;
     left: 110px;
     right: 0;
-    background: #013a63;
+    background: var(--second-color);
     height: 0;
     width: 100vw;
     font-family: "Open Sans";
     padding-top: 10px;
-    color:#fff;
+    color:var(--fifth-color);
 }
 .footer-content{
     display: flex;
@@ -230,18 +255,18 @@ footer{
 }
 .socials a{
     text-decoration: none;
-    color: #fff;
+    color: var(--fifth-color);
 }
 .socials a i{
     font-size: 1.1rem;
     transition: color .4s ease;
 }
 .socials a:hover i{
-    color: #20a6ff;
+    color: var(--forth-color);
 }
 .footer-bottom{
     background: #000;
-    width: 100vhw;
+    width: 100vw;
     padding: 20px 0;
     text-align: center;
 }

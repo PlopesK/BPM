@@ -6,15 +6,23 @@
     font-family: 'Poppins', sans-serif;
 
 }
+
+a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #326CD1;
+}
+
 body{
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: linear-gradient(68.15deg, #2f2325 16.62%, #8e5d52 85.61%)
+    background: linear-gradient(68.15deg, #1A386B 16.62%, #2C68D1 85.61%)
 }
+
 .container{
-    width: 330px;
+    width: 440px;
     background: #fff;
     border-radius: 5px;
     text-align: center;
@@ -46,7 +54,7 @@ body{
  }
  .form-outer form .page .field{
     height: 45px;
-    width: 330px;
+    width: 440px;
     margin: 45px 0;
     display: flex;
     position: relative;
@@ -100,10 +108,10 @@ body{
  .form-outer form .page .field  button{
      width: 100%;
      height: calc(100% + 5px);
-     margin-top: -20px;
+     margin-top: -5px;
      border: none;
      border-radius: 5px;;
-     background: #46bebecb;
+     background: #2959AB;
      color: #fff;
      font-size: 15px;
      font-weight: 500;
