@@ -39,6 +39,7 @@ body{
     height: 30px;
     font-size: 15px;
     margin-right: 10px;
+    margin-bottom: 10px;
     text-decoration: double;
     background-color: var(--third-color);
     color: var(--fifth-color);
