@@ -47,19 +47,19 @@
       </div>
    
       <div class="form-outer">
-        <form class="form" id="form">
+      <form name="form" method="POST" action="cadastro.php">
           <div class="page slidepage ">
             <div class="title">Basic info</div>
             <div class="field">
             <div class="label">Nome</div>
-            <input type="text" id="nome">
+            <input type="text" name="nome">
             <i><img class="img-success" src="../icons/success-icon.svg" alt=""></i>
             <i><img class="img-error"  src="../icons/error-icon.svg" alt=""></i>
             
           </div>
           <div class="field">
             <div class="label">Sobrenome</div>
-            <input type="text" id="sobrenome">
+            <input type="text" name="sobrenome">
             <i><img class="img-success" src="../icons/success-icon.svg" alt=""></i>
             <i><img class="img-error" src="../icons/error-icon.svg" alt=""></i>
           </div>
@@ -72,13 +72,13 @@
             <div class="title">Contact info</div>
             <div class="field">
             <div class="label">Email</div>
-            <input type="email" id="email">
+            <input type="email" name="email">
             <i><img class="img-success" src="../icons/success-icon.svg" alt=""></i>
             <i><img class="img-error"src="../icons/error-icon.svg" alt=""></i>
           </div>
           <div class="field">
             <div class="label">Número de telefone</div>
-            <input type="text" id="numero">
+            <input type="text" name="numero">
             <i><img class="img-success" src="../icons/success-icon.svg" alt=""></i>
             <i><img  class="img-error" src="../icons/error-icon.svg" alt=""></i>
           </div>
@@ -92,7 +92,7 @@
             <div class="title">Outras Informações</div>
             <div class="field">
             <div class="label">Data de Nascimento</div>
-            <input type="text" id="data">
+            <input type="text" name="data">
             <i><img class="img-success" src="icons/success-icon.svg" alt=""></i>
             <i><img class="img-error" src="icons/error-icon.svg" alt=""></i>
           </div>
@@ -134,6 +134,5 @@
       </div>
       <script src="js/teste.js"></script>
     </div>
-
   </body>
 </html>
