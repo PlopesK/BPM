@@ -44,19 +44,19 @@ body{
 
 /* Carrossel de imagens */
 .carousel{
-    position: relative
+    position: relative;
 }
 
 .carousel-inner{
     position: relative;
     width: 100%;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .carousel-inner::after{
     display: block;
     clear: both;
-    content: ""
+    content: "";
 }
     
 .carousel-item{
@@ -71,17 +71,17 @@ body{
 }
 
 .carousel-item-next,.carousel-item-prev,.carousel-item.active{
-    display:block
+    display:block;
 }
 
 .active.carousel-item-right,.carousel-item-next:not(.carousel-item-left){
     -webkit-transform:translateX(100%);
-    transform:translateX(100%)
+    transform:translateX(100%);
 }
 
 .active.carousel-item-left,.carousel-item-prev:not(.carousel-item-right){
     -webkit-transform:translateX(-100%);
-    transform:translateX(-100%)
+    transform:translateX(-100%);
 }
 
 .carousel-control-next,.carousel-control-prev{
@@ -101,24 +101,24 @@ body{
 
 .carousel-control-next:focus,.carousel-control-next:hover,.carousel-control-prev:focus,.carousel-control-prev:hover{
     color:#fff;
-    text-decoration:
-    none;outline:0;
-    opacity:.9
+    text-decoration: none;
+    outline: 0;
+    opacity:.9;
 }
 
 .carousel-control-prev{
-    left:0
+    left:0;
 }
 
 .carousel-control-next{
-    right:0
+    right:0;
 }
 
 .carousel-control-next-icon,.carousel-control-prev-icon{
     display:inline-block;
-    width:20px;
-    height:20px;
-    background:no-repeat 50%/100% 100%
+    width: 20px;
+    height: 20px;
+    background: no-repeat 50%/100% 100%;
 }
 
 .carousel-control-prev-icon{
@@ -134,22 +134,17 @@ body{
     right:0;
     bottom:0;
     left:0;
-    z-index:
-    15;
-    display:-ms-flexbox;
+    z-index: 15;
     display:flex;
-    -ms-flex-pack:center;
     justify-content:center;
     padding-left:0;
     margin-right:15%;
     margin-left:15%;
-    list-style:none
+    list-style:none;
 }
 
 .carousel-indicators li{
     box-sizing:content-box;
-    -ms-flex:0 1 auto;
-    flex:0 1 auto;
     width:30px;
     height:3px;
     margin-right:3px;
@@ -161,7 +156,7 @@ body{
     border-top:10px solid transparent;
     border-bottom:10px solid transparent;
     opacity:.5;
-    transition:opacity .6s ease
+    transition:opacity .6s ease;
 }
 
 .carousel-indicators .active{
@@ -196,7 +191,7 @@ body{
     border: 0;
   }
 
-  /* Troca de temas (cores*/
+  /* Troca de temas (cores)*/
 .temas {
     position: relative;
     flex-direction: row;
