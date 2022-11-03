@@ -2,8 +2,11 @@
     --first-color: #012a4a;
     --second-color: #013a63;
     --third-color: #014f8c;
-    --forth-color: #20a6ff;
+    --fourth-color: #20a6ff;
     --fifth-color: #fff;
+    --sixth-color: #01243D;
+    --seventh-color: #134163;
+    --variable-width: -115%;
 }
 
 *{
@@ -39,18 +42,52 @@ body{
     text-align: center;
     width: 100%;
     height: 100%;
-    margin-top: 2em;
+}
+
+.space {
+	height: 100px;
+    margin-top: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static;
+}
+
+.space-line {
+    width: 120px; 
+    height: 2px; 
+    background: linear-gradient(90deg,var(--fourth-color),var(--seventh-color));
+}
+
+.border {
+    width: 100%;
+    height: 20em;
+    background-color: var(--sixth-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-border {
+    width: 60%;
+    height: 18em;
+    background-color: var(--seventh-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Carrossel de imagens */
 .carousel{
     position: relative;
     width: 100%;
+    left: -8em;
 }
 
 .carousel-inner{
     position: relative;
-    width: 110%;
+    width: 220%;
     overflow: hidden;
 }
 
@@ -112,7 +149,7 @@ body{
 }
 
 .carousel-control-next{
-    right: -30px;
+    right: var(--variable-width);
 }
 
 .carousel-control-next-icon,.carousel-control-prev-icon{
@@ -135,11 +172,11 @@ body{
     right:0;
     bottom:0;
     left:0;
-    z-index: 15;
+    z-index: 3;
     display:flex;
     justify-content:center;
     padding-left:0;
-    width: 85%;
+    width: 190%;
     margin-right:15%;
     margin-left:15%;
     list-style:none;
@@ -149,9 +186,8 @@ body{
     box-sizing:content-box;
     width:30px;
     height:3px;
-    margin-right:3px;
-    margin-left:3px;
-    text-indent:-999px;
+    margin-right:5px;
+    margin-left:5px;
     cursor:pointer;
     background-color:#fff;
     background-clip:padding-box;
@@ -166,7 +202,7 @@ body{
 }
 
 .carousel-caption{
-    position:absolute;
+    position: absolute;
     right: 15%;
     bottom:20px;
     z-index:10;
@@ -224,6 +260,7 @@ body{
     border-left: 10x solid  var(--second-color);
     overflow: hidden;
     transition: 0.5s;
+    z-index: 10;
 
 }
 .navigation:hover{
@@ -350,7 +387,7 @@ body{
     margin-left: -75%;
 }
 .navigation-auto div{
-    border: 2px solid var(--forth-color);
+    border: 2px solid var(--fourth-color);
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -429,7 +466,7 @@ footer{
     transition: color .4s ease;
 }
 .socials a:hover i{
-    color: var(--forth-color);
+    color: var(--fourth-color);
 }
 .footer-bottom{
     background: #000;
