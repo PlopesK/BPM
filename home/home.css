@@ -2,9 +2,11 @@
     --first-color: #012a4a;
     --second-color: #013a63;
     --third-color: #014f8c;
-    --forth-color: #20a6ff;
+    --fourth-color: #20a6ff;
     --fifth-color: #fff;
-    --variable-width: -70%;
+    --sixth-color: #01243D;
+    --seventh-color: #134163;
+    --variable-width: -115%;
 }
 
 *{
@@ -42,20 +44,34 @@ body{
     height: 100%;
 }
 
+.space {
+	height: 100px;
+    margin-top: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static;
+}
+
+.space-line {
+    width: 120px; 
+    height: 2px; 
+    background: linear-gradient(90deg,var(--fourth-color),var(--seventh-color));
+}
+
 .border {
     width: 100%;
-    height: 17em;
-    background-color: var(--second-color);
+    height: 20em;
+    background-color: var(--sixth-color);
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 .inner-border {
     width: 60%;
-    height: 15em;
-    background-color: var(--third-color);
+    height: 18em;
+    background-color: var(--seventh-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,11 +82,12 @@ body{
 .carousel{
     position: relative;
     width: 100%;
+    left: -8em;
 }
 
 .carousel-inner{
     position: relative;
-    width: 170%;
+    width: 220%;
     overflow: hidden;
 }
 
@@ -159,7 +176,7 @@ body{
     display:flex;
     justify-content:center;
     padding-left:0;
-    width: 140%;
+    width: 190%;
     margin-right:15%;
     margin-left:15%;
     list-style:none;
@@ -370,7 +387,7 @@ body{
     margin-left: -75%;
 }
 .navigation-auto div{
-    border: 2px solid var(--forth-color);
+    border: 2px solid var(--fourth-color);
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -449,7 +466,7 @@ footer{
     transition: color .4s ease;
 }
 .socials a:hover i{
-    color: var(--forth-color);
+    color: var(--fourth-color);
 }
 .footer-bottom{
     background: #000;
