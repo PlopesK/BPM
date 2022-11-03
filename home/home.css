@@ -6,7 +6,7 @@
     --fifth-color: #fff;
     --sixth-color: #01243D;
     --seventh-color: #134163;
-    --variable-width: -115%;
+    --variable-width: -119%;
 }
 
 *{
@@ -45,7 +45,7 @@ body{
 }
 
 .space {
-	height: 100px;
+	height: 50px;
     margin-top: 2.5em;
     display: flex;
     justify-content: center;
@@ -82,7 +82,7 @@ body{
 .carousel{
     position: relative;
     width: 100%;
-    left: -8em;
+    left: -7.5em;
 }
 
 .carousel-inner{
