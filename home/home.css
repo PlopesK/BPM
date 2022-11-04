@@ -6,7 +6,7 @@
     --fifth-color: #fff;
     --sixth-color: #01243D;
     --seventh-color: #134163;
-    --variable-width: -115%;
+    --variable-width: -119%;
 }
 
 *{
@@ -15,12 +15,48 @@
     box-sizing: border-box;
     font-family: 'Poppins', 'sans-serife';
 }
+
+a {
+    text-decoration: none;
+}
+
+main {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
 body{
     display: flex;
     justify-content: left;
     align-items: left;
     min-height: 100vh;
     background:  var(--first-color);
+}
+
+h1 {
+    color: var(--fifth-color);
+    font-size: 25px;
+    margin-top: .5em;
+    margin-bottom: 1em;
+    white-space: nowrap;
+}
+
+h2 {
+    color: var(--fifth-color);
+    font-size: 22px;
+    margin-top: .5em;
+    white-space: nowrap;
+}
+
+p {
+    color: var(--fifth-color);
+    font-size: 18px;
+    margin-top: .5em;
 }
 
 .line{
@@ -45,8 +81,8 @@ body{
 }
 
 .space {
-	height: 100px;
-    margin-top: 2.5em;
+	height: 10px;
+    margin-top: 1.5em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,9 +90,9 @@ body{
 }
 
 .space-line {
-    width: 120px; 
+    width: 150px; 
     height: 2px; 
-    background: linear-gradient(90deg,var(--fourth-color),var(--seventh-color));
+    background: linear-gradient(90deg,var(--fourth-color),var(--seventh-color),var(--fifth-color),var(--seventh-color),var(--fourth-color));
 }
 
 .border {
@@ -78,11 +114,74 @@ body{
     justify-content: center;
 }
 
+.escolha {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+
+.escolha img {
+    width: 80%;
+    height: 55%;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+.escolha p {
+    width: 80%;
+    margin-left: 50px;
+}
+
+.match, .music {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: var(--fifth-color) solid 2px;
+    border-radius: 4px;
+    box-shadow: 3px 3px 0 var(--fourth-color);
+    width: 40%;
+    height: 40%;
+    position: relative;
+}
+
+.match:hover, .music:hover {
+    cursor: pointer;
+    animation: escolha 3s infinite ease-in-out;
+}
+
+.match {
+    left: 0%;
+}
+
+.music {
+    left: 5%;
+}
+
+@keyframes escolha {
+    0% {
+        box-shadow: 3px 3px 0 var(--fourth-color);
+        transform: translateY(0px);
+    }
+    50% {
+        box-shadow: 6px 6px 0 var(--fourth-color);
+        transform: translateY(-10px);
+    }
+    100% {
+        box-shadow: 3px 3px 0 var(--fourth-color);
+        transform: translateY(0px);
+    }
+}
+
 /* Carrossel de imagens */
 .carousel{
     position: relative;
     width: 100%;
-    left: -8em;
+    left: -7.5em;
 }
 
 .carousel-inner{
@@ -260,7 +359,7 @@ body{
     border-left: 10x solid  var(--second-color);
     overflow: hidden;
     transition: 0.5s;
-    z-index: 10;
+    z-index: 100;
 
 }
 .navigation:hover{
