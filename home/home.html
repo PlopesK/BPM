@@ -46,10 +46,10 @@
                         <span class="title">Tema</span>
                     </a>
                     <div class="temas" style="display: none;" id="opcoes">
-                         <button id="padrao"> Padrão </button>
+                         <button id="azul"> Azul </button>
+                         <button id="roxo"> Roxo </button>
                          <button id="escura"> Escura </butto>
                          <button id="clara"> Claro </button>
-                         <button id="verde"> Verde </button>
                     </div>
                 </li><br>
                 <li class="list">
@@ -154,12 +154,12 @@
         };
     </script>
     <script>
-        const padrao = document.querySelector('#padrao');
+        const azul = document.querySelector('#azul');
         const escura = document.querySelector('#escura');
         const clara = document.querySelector('#clara');
-        const verde = document.querySelector('#verde');
+        const roxo = document.querySelector('#roxo');
 
-        padrao.addEventListener('click', () => {
+        azul.addEventListener('click', () => {
             document.documentElement.style.setProperty('--first-color', '#012a4a');
             document.documentElement.style.setProperty('--second-color', '#013a63');
             document.documentElement.style.setProperty('--third-color', '#014f8c');
@@ -167,6 +167,15 @@
             document.documentElement.style.setProperty('--fifth-color', '#fff');
             document.documentElement.style.setProperty('--sixth-color', '#01243D');
             document.documentElement.style.setProperty('--seventh-color', '#134163');
+        });
+        roxo.addEventListener('click', () => {
+            document.documentElement.style.setProperty('--first-color', '#37006E');
+            document.documentElement.style.setProperty('--second-color', '#410082');
+            document.documentElement.style.setProperty('--third-color', '#7900F2');
+            document.documentElement.style.setProperty('--fourth-color', '#7900F2');
+            document.documentElement.style.setProperty('--fifth-color', '#fff');
+            document.documentElement.style.setProperty('--sixth-color', '#5700AD');
+            document.documentElement.style.setProperty('--seventh-color', '#7300E6');
         });
         escura.addEventListener('click', () => {
             document.documentElement.style.setProperty('--first-color', '#2D2D2D');
@@ -185,15 +194,6 @@
             document.documentElement.style.setProperty('--fifth-color', 'rgb(0, 0, 0)');
             document.documentElement.style.setProperty('--sixth-color', '#9DB3D1');
             document.documentElement.style.setProperty('--seventh-color', '#586475');
-        });
-        verde.addEventListener('click', () => {
-            document.documentElement.style.setProperty('--first-color', '#084700');
-            document.documentElement.style.setProperty('--second-color', '#0C6B00');
-            document.documentElement.style.setProperty('--third-color', '#129C00');
-            document.documentElement.style.setProperty('--fourth-color', '#129C00');
-            document.documentElement.style.setProperty('--fifth-color', '#fff');
-            document.documentElement.style.setProperty('--sixth-color', '#073D00');
-            document.documentElement.style.setProperty('--seventh-color', '#0A5900');
         });
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
