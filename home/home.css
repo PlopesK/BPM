@@ -42,7 +42,7 @@ h1 {
     color: var(--fifth-color);
     font-size: 25px;
     margin-top: .5em;
-    margin-bottom: .5em;
+    margin-bottom: 1em;
     white-space: nowrap;
 }
 
