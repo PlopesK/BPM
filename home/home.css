@@ -16,6 +16,10 @@
     font-family: 'Poppins', 'sans-serife';
 }
 
+a {
+    text-decoration: none;
+}
+
 main {
     justify-content: center;
     align-items: center;
@@ -122,9 +126,14 @@ p {
 
 .escolha img {
     width: 80%;
-    height: 40%;
+    height: 55%;
     margin-top: .5em;
     margin-bottom: .5em;
+}
+
+.escolha p {
+    width: 80%;
+    margin-left: 50px;
 }
 
 .match, .music {
@@ -133,7 +142,8 @@ p {
     align-items: center;
     text-align: center;
     border: var(--fifth-color) solid 2px;
-    box-shadow: 2px 2px 0 var(--fourth-color);
+    border-radius: 4px;
+    box-shadow: 3px 3px 0 var(--fourth-color);
     width: 40%;
     height: 40%;
     position: relative;
@@ -154,15 +164,15 @@ p {
 
 @keyframes escolha {
     0% {
-        box-shadow: 2px 2px 0 var(--fourth-color);
+        box-shadow: 3px 3px 0 var(--fourth-color);
         transform: translateY(0px);
     }
     50% {
-        box-shadow: 5px 5px 0 var(--fourth-color);
+        box-shadow: 6px 6px 0 var(--fourth-color);
         transform: translateY(-10px);
     }
     100% {
-        box-shadow: 2px 2px 0 var(--fourth-color);
+        box-shadow: 3px 3px 0 var(--fourth-color);
         transform: translateY(0px);
     }
 }
