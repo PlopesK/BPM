@@ -15,12 +15,44 @@
     box-sizing: border-box;
     font-family: 'Poppins', 'sans-serife';
 }
+
+main {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
 body{
     display: flex;
     justify-content: left;
     align-items: left;
     min-height: 100vh;
     background:  var(--first-color);
+}
+
+h1 {
+    color: var(--fifth-color);
+    font-size: 24px;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    white-space: nowrap;
+}
+
+h2 {
+    color: var(--fifth-color);
+    font-size: 22px;
+    margin-top: .5em;
+    white-space: nowrap;
+}
+
+p {
+    color: var(--fifth-color);
+    font-size: 18px;
+    margin-top: .5em;
 }
 
 .line{
@@ -45,8 +77,8 @@ body{
 }
 
 .space {
-	height: 50px;
-    margin-top: 2.5em;
+	height: 10px;
+    margin-top: 1.5em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,9 +86,9 @@ body{
 }
 
 .space-line {
-    width: 120px; 
+    width: 150px; 
     height: 2px; 
-    background: linear-gradient(90deg,var(--fourth-color),var(--seventh-color));
+    background: linear-gradient(90deg,var(--fourth-color),var(--seventh-color),var(--fifth-color),var(--seventh-color),var(--fourth-color));
 }
 
 .border {
@@ -76,6 +108,49 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.escolha {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+
+.escolha img {
+    width: 80%;
+    height: 50%;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+.match {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: var(--fifth-color) solid 2px;
+    box-shadow: 2px 0 0 var(--fourth-color);
+    width: 40%;
+    height: 40%;
+    left: 0%;
+    position: relative;
+}
+
+.music {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: var(--fifth-color) solid 2px;
+    box-shadow: 2px 0 0 var(--fourth-color);
+    width: 40%;
+    height: 40%;
+    left: 5%;
+    position: relative;
 }
 
 /* Carrossel de imagens */
@@ -260,7 +335,7 @@ body{
     border-left: 10x solid  var(--second-color);
     overflow: hidden;
     transition: 0.5s;
-    z-index: 10;
+    z-index: 100;
 
 }
 .navigation:hover{
