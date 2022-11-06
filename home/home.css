@@ -16,6 +16,16 @@
     font-family: 'Poppins', 'sans-serife';
 }
 
+body{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    min-height: 100vh;
+    background:  var(--first-color);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
 a {
     text-decoration: none;
 }
@@ -28,14 +38,6 @@ main {
     flex-direction: column;
     width: 100%;
     height: auto;
-}
-
-body{
-    display: flex;
-    justify-content: left;
-    align-items: left;
-    min-height: 100vh;
-    background:  var(--first-color);
 }
 
 h1 {
@@ -155,11 +157,11 @@ p {
 }
 
 .match {
-    left: 0%;
+    left: -1%;
 }
 
 .music {
-    left: 5%;
+    left: 4%;
 }
 
 @keyframes escolha {
