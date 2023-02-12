@@ -8,4 +8,6 @@ I decided to create this repository to make it easier to orgnize all ideas, and 
 
 <strong> All credit ideas goes to them, I'm just helping them since they don't have a lot of time </strong> <br><br>
 
-Since the site uses a lot of PHP (and github doesn't support it), I will change some files from PHP to HTML only in this repository to show them my changes in execution.
+Since the site uses a lot of PHP (and github doesn't support it), I will change some files from PHP to HTML only in this repository to show them my changes in execution. <br><br>
+
+All design ideas where organized by me, they just said how they wanted those ideas.
