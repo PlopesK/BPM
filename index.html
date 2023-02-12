@@ -135,23 +135,21 @@
         </div>
     <script>
         const list = document.querySelectorAll('.list');
+        const opcoes = document.getElementById("opcoes");
+        const tema = document.getElementById("tema");
         function activeLink(){
             list.forEach((item) =>
             item.classList.remove('active'));
             this.classList.add('active');
         }
+        list.forEach((item) =>
+        item.addEventListener('mouseover', activeLink));
 
-            const opcoes = document.getElementById("opcoes");
-            const tema = document.getElementById("tema");
             tema.addEventListener('mouseout', () => {
-                list.forEach((item) =>
-                item.addEventListener('mouseout', activeLink));
                 opcoes.style.display = "none";
             });
 
             tema.addEventListener('mouseover', () => {
-                list.forEach((item) =>
-                item.addEventListener('mouseover', activeLink));
                 opcoes.style.display = "block";
             });
     </script>
