@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Cmpatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Menu | Front</title>
+        <link rel="stylesheet" href="home.css">
+    </head>
+    <body>
+        <div class="navigation">
+            <ul>
+                <li class="list active">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="title">Home</span>
+                    </a>      
+                </li><br>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+                        <span class="title">Perfil</span>
+                    </a>
+                </li><br>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="chatbox-ellipses-outline"></ion-icon></span>
+                        <span class="title">Mensagem</span>
+                    </a>
+                </li><br>
+                <li class="list">
+                    <a href="https://discord.gg/pVBsvnBu">
+                        <span class="icon"><ion-icon name="logo-discord"></ion-icon></ion-icon></span>
+                        <span class="title">Comunidade</span>
+                    </a>
+                </li><br>
+                <li class="list">
+                    <a href="../contato/contato.html">
+                        <span class="icon"><ion-icon name="hand-left-outline"></ion-icon></ion-icon></span>
+                        <span class="title">Suporte</span>
+                    </a>
+                </li><br>
+                <li class="list">
+                    <a onclick="cor()" id="#tema" style="cursor: pointer;">
+                        <span class="icon"><ion-icon name="moon-outline"></ion-icon></ion-icon></span>
+                        <span class="title">Tema</span>
+                    </a>
+                    <div class="temas" style="display: none;" id="opcoes">
+                         <button id="azul"> Azul </button>
+                         <button id="roxo"> Roxo </button>
+                         <button id="escura"> Escura </butto>
+                         <button id="clara"> Claro </button>
+                    </div>
+                </li><br>
+                <li class="list">
+                     <a href="#">
+                        <span class="icon"><ion-icon name="options-outline"></ion-icon>
+                        </span>
+                        <span class="title">Configurações</span>
+                    </a>
+                </li>
+            </ul>   
+        </div>
+
+        <div class="home">
+            <div class="border">
+                <div class="inner-border">
+                    <div id="carousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel" data-slide-to="1" class=""></li>
+                        <li data-target="#carousel" data-slide-to="2" class=""></li>
+                        <li data-target="#carousel" data-slide-to="3" class=""></li>
+                        </ol>
+                        <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="img-fluid d-block " src="home-img/bpm1.png" alt="Bem-vindo(a)!">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-fluid d-block " src="home-img/bpm2.png" alt="Siga nossas redes sociais!">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-fluid d-block " src="home-img/bpm3.png" alt="Use seu talento!">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-fluid d-block " src="home-img/bpm4.png">
+                        </div>
+                        </div>
+
+                        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Anterior</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Próximo</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space">
+                <div class="space-line" id="horizontal-line">
+                </div>
+            </div>
+            
+            <main>
+                <h1> O que você deseja fazer? </h1> <br>
+                <span class="escolha">
+                    <figure class="match">
+                        <a href="../match/match.html">
+                            <h2> Buscar um match </h2>
+                            <img src="home-img/match.png" alt="Forme uma banda!">
+                            <p>
+                                ♦ Busque um match agora mesmo e tenha a sorte de se encontrar com seu parceiro de banda ideal! <br><br>
+                                ♦ Ou até mesmo se deparar com pessoas de gostos musicais semelhantes aos seus!
+                            </p>
+                        </a>
+                    </figure>
+                    <figure class="music">
+                        <a href="../music/musicweb.html">
+                            <h2> Ouvir algumas músicas </h2>
+                            <img src="home-img/music.png" alt="Escute música!">
+                            <p>
+                                ♦ Teve um dia cansativo? Que tal descansar ouvindo algumas músicas? <br><br>
+                                ♦ Aproveite para tentar conhecer novas músicas! Vai ver você acha uma nova banda favorita
+                            </p>
+                        </a>
+                    </figure>
+                    </a>
+                </span>
+            </main>
+        </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach((item) =>
+        item.addEventListener('click', activeLink));
+
+        function cor() {
+            const opcoes = document.getElementById("opcoes");
+            if (opcoes.style.display == "none") {
+                opcoes.style.display = "block";
+            } 
+            else {
+                opcoes.style.display = "none";
+            }
+        };
+    </script>
+    <script>
+        const azul = document.querySelector('#azul');
+        const escura = document.querySelector('#escura');
+        const clara = document.querySelector('#clara');
+        const roxo = document.querySelector('#roxo');
+
+        azul.addEventListener('click', () => {
+            document.documentElement.style.setProperty('--first-color', '#012a4a');
+            document.documentElement.style.setProperty('--second-color', '#013a63');
+            document.documentElement.style.setProperty('--third-color', '#014f8c');
+            document.documentElement.style.setProperty('--fourth-color', '#20a6ff');
+            document.documentElement.style.setProperty('--fifth-color', '#fff');
+            document.documentElement.style.setProperty('--sixth-color', '#01243D');
+            document.documentElement.style.setProperty('--seventh-color', '#134163');
+        });
+        roxo.addEventListener('click', () => {
+            document.documentElement.style.setProperty('--first-color', '#37006E');
+            document.documentElement.style.setProperty('--second-color', '#410082');
+            document.documentElement.style.setProperty('--third-color', '#7900F2');
+            document.documentElement.style.setProperty('--fourth-color', '#7900F2');
+            document.documentElement.style.setProperty('--fifth-color', '#fff');
+            document.documentElement.style.setProperty('--sixth-color', '#5700AD');
+            document.documentElement.style.setProperty('--seventh-color', '#7300E6');
+        });
+        escura.addEventListener('click', () => {
+            document.documentElement.style.setProperty('--first-color', '#2D2D2D');
+            document.documentElement.style.setProperty('--second-color', '#424242');
+            document.documentElement.style.setProperty('--third-color', '#7028F7');
+            document.documentElement.style.setProperty('--fourth-color', '#7028F7');
+            document.documentElement.style.setProperty('--fifth-color', '#fff');
+            document.documentElement.style.setProperty('--sixth-color', '#3D3D3D');
+            document.documentElement.style.setProperty('--seventh-color', '#4D4D4D');
+        });
+        clara.addEventListener('click', () => {
+            document.documentElement.style.setProperty('--first-color', '#BBD5FA');
+            document.documentElement.style.setProperty('--second-color', '#9DB3D1');
+            document.documentElement.style.setProperty('--third-color', '#CDDBF8');
+            document.documentElement.style.setProperty('--fourth-color', '#CDDBF8');
+            document.documentElement.style.setProperty('--fifth-color', 'rgb(0, 0, 0)');
+            document.documentElement.style.setProperty('--sixth-color', '#9DB3D1');
+            document.documentElement.style.setProperty('--seventh-color', '#586475');
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>
