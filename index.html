@@ -41,15 +41,17 @@
                     </a>
                 </li><br>
                 <li class="list">
-                    <a onclick="cor()" id="#tema" style="cursor: pointer;">
-                        <span class="icon"><ion-icon name="moon-outline"></ion-icon></ion-icon></span>
-                        <span class="title">Tema</span>
-                    </a>
-                    <div class="temas" style="display: none;" id="opcoes">
-                         <button id="azul"> Azul </button>
-                         <button id="roxo"> Roxo </button>
-                         <button id="escura"> Escura </butto>
-                         <button id="clara"> Claro </button>
+                    <div class="temas" id="tema">
+                        <a style="cursor: pointer;">
+                            <span class="icon"><ion-icon name="moon-outline"></ion-icon></ion-icon></span>
+                            <span class="title">Tema</span>
+                        </a>
+                        <div class="opcoes" style="display: none;" id="opcoes">
+                            <button id="azul"> Azul </button>
+                            <button id="roxo"> Roxo </button>
+                            <button id="escura"> Escura </butto>
+                            <button id="clara"> Claro </button>
+                        </div>
                     </div>
                 </li><br>
                 <li class="list">
@@ -143,15 +145,30 @@
         list.forEach((item) =>
         item.addEventListener('click', activeLink));
 
-        function cor() {
-            const opcoes = document.getElementById("opcoes");
+        const opcoes = document.getElementById("opcoes");
+        const tema = document.getElementById("tema");
+
+        tema.addEventListener('click', () => {
             if (opcoes.style.display == "none") {
                 opcoes.style.display = "block";
             } 
             else {
-                opcoes.style.display = "none";
+                 opcoes.style.display = "none";
             }
-        };
+        });
+
+        tema.addEventListener('mouseout', () => {
+            list.forEach((item) =>
+            item.addEventListener('mouseout', activeLink));
+            opcoes.style.display = "none";
+        });
+
+        tema.addEventListener('mouseover', () => {
+            list.forEach((item) =>
+            item.addEventListener('mouseover', activeLink));
+            opcoes.style.display = "block";
+        });
+        
     </script>
     <script>
         const azul = document.querySelector('#azul');

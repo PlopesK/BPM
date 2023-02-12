@@ -331,13 +331,13 @@ p {
   }
 
   /* Troca de temas (cores)*/
-.temas {
+.opcoes {
     position: relative;
     flex-direction: row;
     padding: 5px 3px 1px 3px;
 }
 
-.temas button {
+.opcoes button {
     width: 100px;
     height: 30px;
     font-size: 15px;
