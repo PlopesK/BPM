@@ -133,8 +133,6 @@
                 </span>
             </main>
         </div>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script>
         const list = document.querySelectorAll('.list');
         function activeLink(){
@@ -142,33 +140,20 @@
             item.classList.remove('active'));
             this.classList.add('active');
         }
-        list.forEach((item) =>
-        item.addEventListener('click', activeLink));
 
-        const opcoes = document.getElementById("opcoes");
-        const tema = document.getElementById("tema");
+            const opcoes = document.getElementById("opcoes");
+            const tema = document.getElementById("tema");
+            tema.addEventListener('mouseout', () => {
+                list.forEach((item) =>
+                item.addEventListener('mouseout', activeLink));
+                opcoes.style.display = "none";
+            });
 
-        tema.addEventListener('click', () => {
-            if (opcoes.style.display == "none") {
+            tema.addEventListener('mouseover', () => {
+                list.forEach((item) =>
+                item.addEventListener('mouseover', activeLink));
                 opcoes.style.display = "block";
-            } 
-            else {
-                 opcoes.style.display = "none";
-            }
-        });
-
-        tema.addEventListener('mouseout', () => {
-            list.forEach((item) =>
-            item.addEventListener('mouseout', activeLink));
-            opcoes.style.display = "none";
-        });
-
-        tema.addEventListener('mouseover', () => {
-            list.forEach((item) =>
-            item.addEventListener('mouseover', activeLink));
-            opcoes.style.display = "block";
-        });
-        
+            });
     </script>
     <script>
         const azul = document.querySelector('#azul');
@@ -176,43 +161,45 @@
         const clara = document.querySelector('#clara');
         const roxo = document.querySelector('#roxo');
 
-        azul.addEventListener('click', () => {
-            document.documentElement.style.setProperty('--first-color', '#012a4a');
-            document.documentElement.style.setProperty('--second-color', '#013a63');
-            document.documentElement.style.setProperty('--third-color', '#014f8c');
-            document.documentElement.style.setProperty('--fourth-color', '#20a6ff');
-            document.documentElement.style.setProperty('--fifth-color', '#fff');
-            document.documentElement.style.setProperty('--sixth-color', '#01243D');
-            document.documentElement.style.setProperty('--seventh-color', '#134163');
-        });
-        roxo.addEventListener('click', () => {
-            document.documentElement.style.setProperty('--first-color', '#37006E');
-            document.documentElement.style.setProperty('--second-color', '#410082');
-            document.documentElement.style.setProperty('--third-color', '#7900F2');
-            document.documentElement.style.setProperty('--fourth-color', '#7900F2');
-            document.documentElement.style.setProperty('--fifth-color', '#fff');
-            document.documentElement.style.setProperty('--sixth-color', '#5700AD');
-            document.documentElement.style.setProperty('--seventh-color', '#7300E6');
-        });
-        escura.addEventListener('click', () => {
-            document.documentElement.style.setProperty('--first-color', '#2D2D2D');
-            document.documentElement.style.setProperty('--second-color', '#424242');
-            document.documentElement.style.setProperty('--third-color', '#7028F7');
-            document.documentElement.style.setProperty('--fourth-color', '#7028F7');
-            document.documentElement.style.setProperty('--fifth-color', '#fff');
-            document.documentElement.style.setProperty('--sixth-color', '#3D3D3D');
-            document.documentElement.style.setProperty('--seventh-color', '#4D4D4D');
-        });
-        clara.addEventListener('click', () => {
-            document.documentElement.style.setProperty('--first-color', '#BBD5FA');
-            document.documentElement.style.setProperty('--second-color', '#9DB3D1');
-            document.documentElement.style.setProperty('--third-color', '#CDDBF8');
-            document.documentElement.style.setProperty('--fourth-color', '#CDDBF8');
-            document.documentElement.style.setProperty('--fifth-color', 'rgb(0, 0, 0)');
-            document.documentElement.style.setProperty('--sixth-color', '#9DB3D1');
-            document.documentElement.style.setProperty('--seventh-color', '#586475');
-        });
+            azul.addEventListener('click', () => {
+                document.documentElement.style.setProperty('--first-color', '#012a4a');
+                document.documentElement.style.setProperty('--second-color', '#013a63');
+                document.documentElement.style.setProperty('--third-color', '#014f8c');
+                document.documentElement.style.setProperty('--fourth-color', '#20a6ff');
+                document.documentElement.style.setProperty('--fifth-color', '#fff');
+                document.documentElement.style.setProperty('--sixth-color', '#01243D');
+                document.documentElement.style.setProperty('--seventh-color', '#134163');
+            });
+            roxo.addEventListener('click', () => {
+                document.documentElement.style.setProperty('--first-color', '#37006E');
+                document.documentElement.style.setProperty('--second-color', '#410082');
+                document.documentElement.style.setProperty('--third-color', '#7900F2');
+                document.documentElement.style.setProperty('--fourth-color', '#7900F2');
+                document.documentElement.style.setProperty('--fifth-color', '#fff');
+                document.documentElement.style.setProperty('--sixth-color', '#5700AD');
+                document.documentElement.style.setProperty('--seventh-color', '#7300E6');
+            });
+            escura.addEventListener('click', () => {
+                document.documentElement.style.setProperty('--first-color', '#2D2D2D');
+                document.documentElement.style.setProperty('--second-color', '#424242');
+                document.documentElement.style.setProperty('--third-color', '#7028F7');
+                document.documentElement.style.setProperty('--fourth-color', '#7028F7');
+                document.documentElement.style.setProperty('--fifth-color', '#fff');
+                document.documentElement.style.setProperty('--sixth-color', '#3D3D3D');
+                document.documentElement.style.setProperty('--seventh-color', '#4D4D4D');
+            });
+            clara.addEventListener('click', () => {
+                document.documentElement.style.setProperty('--first-color', '#BBD5FA');
+                document.documentElement.style.setProperty('--second-color', '#9DB3D1');
+                document.documentElement.style.setProperty('--third-color', '#CDDBF8');
+                document.documentElement.style.setProperty('--fourth-color', '#CDDBF8');
+                document.documentElement.style.setProperty('--fifth-color', 'rgb(0, 0, 0)');
+                document.documentElement.style.setProperty('--sixth-color', '#9DB3D1');
+                document.documentElement.style.setProperty('--seventh-color', '#586475');
+            });
     </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
