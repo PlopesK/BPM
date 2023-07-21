@@ -1,5 +1,5 @@
 # BPM 🎶
-<h1>Summary</h1>
+<h2>Summary</h2>
 <h3>🎵 A site made for those who love music 🎵</h3>
 
 BPM is a site thinked by André Gabriel, Gabriel Monfardini, Luíz Gustavo, Leandro Camargo and César Paneto <br>
