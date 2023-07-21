@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/kurinto');
 :root {
     --first-color: #012a4a;
     --second-color: #013a63;
@@ -13,7 +14,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', 'sans-serife';
+    font-family: 'Kurinto Cali', sans-serif;                                            
 }
 
 body{
