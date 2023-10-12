@@ -17,6 +17,12 @@
   font-family: "Kurinto Cali", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+  overscroll-behavior: none;
+}
+
 body {
   display: flex;
   min-height: 100vh;
@@ -27,16 +33,6 @@ body {
 
 a {
   text-decoration: none;
-}
-
-main {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: auto;
 }
 
 h1 {
@@ -149,6 +145,7 @@ p {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  justify-content: center;
   border: var(--fifth-color) solid 2px;
   border-radius: 4px;
   box-shadow: 3px 3px 0 var(--fourth-color);
@@ -161,7 +158,7 @@ p {
 .match:hover,
 .music:hover {
   cursor: pointer;
-  animation: escolha 2s infinite ease-in-out;
+  animation: botao 2s infinite ease-in-out;
 }
 
 .match {
@@ -172,7 +169,7 @@ p {
   left: 4%;
 }
 
-@keyframes escolha {
+@keyframes botao {
   0% {
     box-shadow: 3px 3px 0 var(--fourth-color);
     transform: scale(1);
@@ -614,8 +611,7 @@ footer {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    left: 50%;
-    right: 50%;
+    left: 25px;
   }
 
   .navigation {
@@ -641,5 +637,36 @@ footer {
 
   p {
     font-size: 12px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .match,
+  .music {
+    left: 0;
+    margin-left: 0px;
+    padding: 10px;
+    height: 350px;
+    justify-content: space-between;
+    width: 45%;
+  }
+
+  .escolha {
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    display: flex;
+  }
+
+  .escolha p {
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  .escolha img {
+    width: 100%;
+    height: 55%;
   }
 }
