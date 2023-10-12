@@ -8,43 +8,44 @@
         <link rel="stylesheet" href="home.css">
     </head>
     <body>
+        <!-- /////////////////////////////// NAVIGATION /////////////////////////////// -->
         <div class="navigation">
             <ul>
                 <li class="list active">
                     <a href="#">
                         <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
-                        <span class="title">Home</span>
+                        <span class="title"><p>Home</p></span>
                     </a>      
                 </li><br>
                 <li class="list">
                     <a href="#">
                         <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
-                        <span class="title">Perfil</span>
+                        <span class="title"><p>Perfil</p></span>
                     </a>
                 </li><br>
                 <li class="list">
                     <a href="#">
                         <span class="icon"><ion-icon name="chatbox-ellipses-outline"></ion-icon></span>
-                        <span class="title">Mensagem</span>
+                        <span class="title"><p>Mensagem</p></span>
                     </a>
                 </li><br>
                 <li class="list">
                     <a href="">
                         <span class="icon"><ion-icon name="logo-discord"></ion-icon></ion-icon></span>
-                        <span class="title">Comunidade</span>
+                        <span class="title"><p>Comunidade</p></span>
                     </a>
                 </li><br>
                 <li class="list">
                     <a href="">
                         <span class="icon"><ion-icon name="hand-left-outline"></ion-icon></ion-icon></span>
-                        <span class="title">Suporte</span>
+                        <span class="title"><p>Suporte</p></span>
                     </a>
                 </li><br>
                 <li class="list">
                     <div class="temas" id="tema">
                         <a style="cursor: pointer;">
                             <span class="icon"><ion-icon name="moon-outline"></ion-icon></ion-icon></span>
-                            <span class="title">Tema</span>
+                            <span class="title"><p>Tema</p></span>
                         </a>
                         <div class="opcoes" style="display: none;" id="opcoes">
                             <button id="azul"> Azul </button>
@@ -58,12 +59,13 @@
                      <a href="#">
                         <span class="icon"><ion-icon name="options-outline"></ion-icon>
                         </span>
-                        <span class="title">Configurações</span>
+                        <span class="title"><p>Configurações</p></span>
                     </a>
                 </li>
             </ul>   
         </div>
 
+        <!-- /////////////////////////////// HOME /////////////////////////////// -->
         <div class="home">
             <div class="border">
                 <div class="inner-border">
@@ -105,6 +107,8 @@
                 <div class="space-line" id="horizontal-line">
                 </div>
             </div>
+
+            <!-- /////////////////////////////// BUTTONS /////////////////////////////// -->
             
             <main>
                 <h1> O que você deseja fazer? </h1> <br>
@@ -132,6 +136,9 @@
                     </a>
                 </span>
             </main>
+
+            <div class="space">
+            </div>
         </div>
     <script>
         const list = document.querySelectorAll('.list');
