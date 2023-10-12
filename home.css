@@ -604,16 +604,6 @@ footer {
     flex-direction: column;
   }
 
-  .home {
-    transform: scale(0.9);
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    left: 25px;
-  }
-
   .navigation {
     position: fixed;
     height: 100%;
@@ -641,6 +631,31 @@ footer {
 
   h2 {
     font-size: 18px;
+  }
+
+  .home {
+    transform: scale(0.9);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    left: 25px;
+  }
+
+  .border {
+    height: 13em;
+  }
+
+  .inner-border {
+    height: 11.5em;
+    width: 75%;
+  }
+
+  .carousel {
+    transform: scale(1.55);
+    left: -4.8em;
+    top: 0.2em;
   }
 
   .match,
